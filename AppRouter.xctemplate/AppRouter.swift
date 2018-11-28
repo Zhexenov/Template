@@ -14,7 +14,9 @@ public enum PresentType {
 }
 
 public protocol IAppRouter {
+    
     var resolver: Resolver { get }
+    
     func present(view: UIViewController, animatedDisplay: Bool, animatedDismiss: Bool, presentType: PresentType)
     func popToRootViewController(animated: Bool)
     func popViewController(animated: Bool)
