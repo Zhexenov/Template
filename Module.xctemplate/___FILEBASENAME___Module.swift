@@ -10,9 +10,9 @@ import UIKit
 
 public class ___VARIABLE_productName:identifier___Module: IModule {
     
-    public let router: IAppsRouter
+    public let router: IAppRouter
 
-    public init(router: IAppsRouter) {
+    public init(router: IAppRouter) {
         self.router = router
     }
 
