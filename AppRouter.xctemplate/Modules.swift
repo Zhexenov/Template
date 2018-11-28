@@ -21,26 +21,26 @@ public protocol Product {
 }
 
 public enum Products {
-    case ARTDEVProduct
+    case DevProduct
 
     public var productName: String {
         switch self {
-        case .ARTDEVProduct:
-            return "ARTDEV"
+        case .DevProduct:
+            return "Dev"
         }
     }
 
-    public enum ARTDEV: Module {
+    public enum Dev: Module {
         case LoginModule // Sample module
 
         public var productName: String {
-            return "ARTDEV"
+            return "Dev"
         }
 
         public var routePath: String {
             switch self {
             case .LoginModule:
-                return "/artdev/login"            
+                return "/dev/login"
             }
         }
     }

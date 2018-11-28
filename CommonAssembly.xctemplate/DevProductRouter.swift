@@ -1,5 +1,5 @@
 //
-//  ARTDEVProductRouter.swift
+//  DevProductRouter.swift
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-public class ARTDEVProductRouter: IProductRouter {
+public class DevProductRouter: IProductRouter {
     
     public let router: IAppRouter
     
-    public let modules: [String: (IAppRouter) -> IModule] = [:] // Products.ARTDEV.LoginModule.routePath: { LoginModule(router: $0) }
+    public let modules: [String: (IAppRouter) -> IModule] = [:] // Products.Dev.LoginModule.routePath: { LoginModule(router: $0) }
     
     public init(router: IAppRouter) {
         self.router = router
