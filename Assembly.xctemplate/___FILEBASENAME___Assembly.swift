@@ -9,6 +9,7 @@ import Foundation
 import Swinject
 
 public class ___VARIABLE_productName:identifier___Assembly: Assembly {
+    
     public init() {}
     
     public func assemble(container: Container) {
@@ -59,8 +60,12 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
          */
         
         container.register(___VARIABLE_productName:identifier___ViewController.self) { (r, appRouter: IAppRouter, parameters: [String: Any]) in
-            let bundle = Bundle(for: ___VARIABLE_productName:identifier___ViewController.self)
-            let view = ___VARIABLE_productName:identifier___ViewController(nibName: "___VARIABLE_productName:identifier___ViewController", bundle: bundle)
+            
+            // To load ViewController from .nib
+            /*let bundle = Bundle(for: ___VARIABLE_productName:identifier___ViewController.self)
+            let view = ___VARIABLE_productName:identifier___ViewController(nibName: "___VARIABLE_productName:identifier___ViewController", bundle: bundle)*/
+            
+            let view = ___VARIABLE_productName:identifier___ViewController()
             let presenter = r.resolve(I___VARIABLE_productName:identifier___Presenter.self, arguments: appRouter, view as I___VARIABLE_productName:identifier___ViewController)!
             presenter.parameters = parameters
             view.presenter = presenter
