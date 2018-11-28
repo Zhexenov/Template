@@ -7,13 +7,6 @@
 
 import UIKit
 
-public protocol I___VARIABLE_productName:identifier___InteractorDelegate: class {
-	
-}
-
-public protocol I___VARIABLE_productName:identifier___Interactor: class {
-	var delegate: I___VARIABLE_productName:identifier___InteractorDelegate? { get set }
-}
 
 public class ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_productName:identifier___Interactor {
 	

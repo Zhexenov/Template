@@ -10,13 +10,11 @@
 	<array>
 		<string>com.apple.platform.iphoneos</string>
 	</array>
-	<key>Description</key>
-	<string>Basic Swift VIPER Dependency Injection module template.</string>
 	<key>Kind</key>
-	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>	
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>SortOrder</key>
-	<integer>1</integer>	
+	<integer>1</integer>
 	<key>Template Author</key>
-	<string>Ari Munandar - @ARTDEVINDONESIA</string>
+	<string>Jex</string>
 </dict>
 </plist>

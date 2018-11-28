@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 public class ___VARIABLE_productName:identifier___Module: IModule {
+    
     public let router: IAppsRouter
 
     public init(router: IAppsRouter) {

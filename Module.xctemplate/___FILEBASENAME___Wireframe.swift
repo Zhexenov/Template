@@ -7,11 +7,9 @@
 
 import UIKit
 
-public protocol I___VARIABLE_productName:identifier___Wireframe: class {
-    func presentView(parameters: [String: Any], presentType: PresentType)    
-}
 
 public class ___VARIABLE_productName:identifier___Wireframe: I___VARIABLE_productName:identifier___Wireframe {
+    
     let router: IAppRouter
 
     init(router: IAppRouter) {
