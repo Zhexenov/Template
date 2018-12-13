@@ -12,7 +12,8 @@ public class ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_produ
 	
 	// MARK: - Declare delegate
 
-	public var delegate: I___VARIABLE_productName:identifier___InteractorDelegate?
+	public var presenter: I___VARIABLE_productName:identifier___InteractorOutput?
+    public var dataManager: I___VARIABLE_productName:identifier___DataManager?
 
 	/*
 	 | Declare your managers here, ex:
@@ -29,4 +30,16 @@ public class ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_produ
 	init() {
 		// Do someting here...
 	}
+    
+    public func viewDidLoad() {
+        
+    }
+}
+
+extension ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_productName:identifier___DataManagerOutput {
+    
+    public func onError(message: String?) {
+        
+    }
+    
 }

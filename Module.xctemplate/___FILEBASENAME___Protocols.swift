@@ -16,23 +16,37 @@ public protocol I___VARIABLE_productName:identifier___Wireframe: class {
 }
 
 /* Interactor */
-public protocol I___VARIABLE_productName: identifier___InteractorDelegate: class {
+public protocol I___VARIABLE_productName: identifier___InteractorOutput: IBaseInteractorOutput {
     
 }
 
-public protocol I___VARIABLE_productName: identifier___Interactor: class {
+public protocol I___VARIABLE_productName: identifier___Interactor: IBaseInteractor {
     
-    var delegate: I___VARIABLE_productName:identifier___InteractorDelegate? { get set }
+    var presenter: I___VARIABLE_productName:identifier___InteractorOutput? { get set }
+    
+    var dataManager: I___VARIABLE_productName:identifier___DataManager? { get set }
+
 }
 
 /* Presenter */
-public protocol I___VARIABLE_productName:identifier___Presenter: class {
+public protocol I___VARIABLE_productName:identifier___Presenter: IBasePresenter {
     
     var parameters: [String: Any]? { get set }
     
 }
 
 /* View */
-public protocol I___VARIABLE_productName:identifier___ViewController: class {
+public protocol I___VARIABLE_productName:identifier___View: IBaseView {
+    
+}
+
+
+/* DataManager */
+public protocol I___VARIABLE_productName:identifier___DataManager: class {
+    var handler: I___VARIABLE_productName:identifier___DataManagerOutput? { get set }
+
+}
+
+public protocol I___VARIABLE_productName:identifier___DataManagerOutput: IBaseDataManagerOutput {
     
 }
