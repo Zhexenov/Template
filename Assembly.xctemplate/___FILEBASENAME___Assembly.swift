@@ -21,14 +21,17 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
             ___VARIABLE_productName:identifier___Wireframe(router: appRouter)
         }
         
-        container.register(I___VARIABLE_productName:identifier___Interactor.self) { _ in
+        container.register(I___VARIABLE_productName:identifier___DataManager.self) { _ in
+            return ___VARIABLE_productName:identifier___DataManager()
+        
+        container.register(I___VARIABLE_productName:identifier___Interactor.self) { r in
             
             let dataManager = r.resolve(I___VARIABLE_productName:identifier___DataManager.self)
             let interactor = ___VARIABLE_productName:identifier___Interactor(manager: dataManager)
             return interactor
         }
         
-        container.register(I___VARIABLE_productName:identifier___Presenter.self) { (r, appRouter: IAppRouter, view: I___VARIABLE_productName:identifier___ViewController) in
+        container.register(I___VARIABLE_productName:identifier___Presenter.self) { (r, appRouter: IAppRouter, view: I___VARIABLE_productName:identifier___View) in
             let wireframe = r.resolve(I___VARIABLE_productName:identifier___Wireframe.self, argument: appRouter)!
             let interactor = r.resolve(I___VARIABLE_productName:identifier___Interactor.self)!
             let presenter = ___VARIABLE_productName:identifier___Presenter(interactor: interactor, wireframe: wireframe, view: view)
@@ -53,11 +56,13 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
         container.register(___VARIABLE_productName:identifier___ViewController.self) { (r, appRouter: IAppRouter, parameters: [String: Any]) in
             
             // To load ViewController from .nib
-            /*let bundle = Bundle(for: ___VARIABLE_productName:identifier___ViewController.self)
-            let view = ___VARIABLE_productName:identifier___ViewController(nibName: "___VARIABLE_productName:identifier___ViewController", bundle: bundle)*/
+            /*
+             let bundle = Bundle(for: ___VARIABLE_productName:identifier___ViewController.self)
+             let view = ___VARIABLE_productName:identifier___ViewController(nibName: "___VARIABLE_productName:identifier___ViewController", bundle: bundle)
+            */
             
             let view = ___VARIABLE_productName:identifier___ViewController()
-            let presenter = r.resolve(I___VARIABLE_productName:identifier___Presenter.self, arguments: appRouter, view as I___VARIABLE_productName:identifier___ViewController)!
+            let presenter = r.resolve(I___VARIABLE_productName:identifier___Presenter.self, arguments: appRouter, view as I___VARIABLE_productName:identifier___View)!
             presenter.parameters = parameters
             view.presenter = presenter
             return view
