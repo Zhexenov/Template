@@ -23,9 +23,9 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
         
         container.register(I___VARIABLE_productName:identifier___DataManager.self) { _ in
             return ___VARIABLE_productName:identifier___DataManager()
+        }
         
         container.register(I___VARIABLE_productName:identifier___Interactor.self) { r in
-            
             let dataManager = r.resolve(I___VARIABLE_productName:identifier___DataManager.self)
             let interactor = ___VARIABLE_productName:identifier___Interactor(manager: dataManager)
             return interactor
@@ -35,7 +35,7 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
             let wireframe = r.resolve(I___VARIABLE_productName:identifier___Wireframe.self, argument: appRouter)!
             let interactor = r.resolve(I___VARIABLE_productName:identifier___Interactor.self)!
             let presenter = ___VARIABLE_productName:identifier___Presenter(interactor: interactor, wireframe: wireframe, view: view)
-            interactor.delegate = presenter
+            interactor.presenter = presenter
             return presenter
         }
         
