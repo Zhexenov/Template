@@ -6,6 +6,7 @@
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
 import Foundation
+import Moya
 
 public class ___VARIABLE_productName:identifier___DataManager: I___VARIABLE_productName:identifier___DataManager {
     public var handler: I___VARIABLE_productName:identifier___DataManagerOutput?

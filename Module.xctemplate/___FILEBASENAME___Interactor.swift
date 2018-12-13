@@ -10,25 +10,13 @@ import UIKit
 
 public class ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_productName:identifier___Interactor {
 	
-	// MARK: - Declare delegate
 
 	public var presenter: I___VARIABLE_productName:identifier___InteractorOutput?
     public var dataManager: I___VARIABLE_productName:identifier___DataManager?
 
-	/*
-	 | Declare your managers here, ex:
-	 |
-	 | var sampleManager: ISampleManager?
-	 |
-	 | And let's initial managers, ex:
-	 |
-	 | init(sampleManager: ISampleManager) {
-	 |    self.sampleManager = sampleManager
-	 | }
-	 */
 
-	init() {
-		// Do someting here...
+    init(manager: I___VARIABLE_productName:identifier___DataManager?) {
+		dataManager = manager
 	}
     
     public func viewDidLoad() {

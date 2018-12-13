@@ -23,17 +23,8 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
         
         container.register(I___VARIABLE_productName:identifier___Interactor.self) { _ in
             
-            /*
-             | Register your manager here, ex:
-             |
-             | let sampleManager = r.resolve(ISampleManager.self)!
-             |
-             | And let's initial the manager with interactor, ex:
-             |
-             | let interactor = ___VARIABLE_productName:identifier___Interactor(sampleManager: sampleManager)
-             */
-            
-            let interactor = ___VARIABLE_productName:identifier___Interactor()
+            let dataManager = r.resolve(I___VARIABLE_productName:identifier___DataManager.self)
+            let interactor = ___VARIABLE_productName:identifier___Interactor(manager: dataManager)
             return interactor
         }
         
