@@ -6,7 +6,7 @@
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
 import Foundation
-import UIKit
+
 
 public protocol IModule {
     func presentView(parameters: [String: Any], presentType: PresentType)
