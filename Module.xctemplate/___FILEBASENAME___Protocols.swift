@@ -18,6 +18,7 @@ public protocol I___VARIABLE_productName:identifier___Wireframe: class {
 
 /* Interactor */
 public protocol I___VARIABLE_productName: identifier___Interactor: IBaseInteractor {
+    
     var presenter: I___VARIABLE_productName:identifier___InteractorOutput? { get set }
     var dataManager: I___VARIABLE_productName:identifier___DataManager? { get set }
 
@@ -44,6 +45,7 @@ public protocol I___VARIABLE_productName:identifier___View: IBaseView {
 
 /* DataManager */
 public protocol I___VARIABLE_productName:identifier___DataManager: class {
+    
     var handler: I___VARIABLE_productName:identifier___DataManagerOutput? { get set }
 
 }
