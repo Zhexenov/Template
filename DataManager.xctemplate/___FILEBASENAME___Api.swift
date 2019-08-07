@@ -9,33 +9,33 @@
 import Moya
 
 
-public enum ___VARIABLE_productName:identifier___Api {
+enum ___VARIABLE_productName:identifier___Api {
     
 }
 
 
 extension ___VARIABLE_productName:identifier___Api: TargetType {
     
-    public var baseURL: URL {
+    var baseURL: URL {
         guard let url = URL(string: baseUrl) else { fatalError("Invalid base url") }
         return url
     }
     
-    public var path: String {
+    var path: String {
         switch self {
         default:
             return "/"
         }
     }
     
-    public var method: Moya.Method {
+    var method: Moya.Method {
         switch self {
         default:
             return .get
         }
     }
     
-    public var sampleData: Data {
+    var sampleData: Data {
         return "Test sample data".data(using: .utf8)!
     }
     
@@ -46,14 +46,14 @@ extension ___VARIABLE_productName:identifier___Api: TargetType {
         }
     }
     
-    public var task: Task {
+    var task: Task {
         switch self {
         default:
             return Task.requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
     
-    public var headers: [String : String]? {
+    var headers: [String : String]? {
         return nil
     }
 }
