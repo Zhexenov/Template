@@ -5,12 +5,14 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
-import Foundation
+
 import Swinject
+
 
 public protocol IProductRouter: class {
     func presentModule(module: Module, parameters: [String: Any], presentType: PresentType)
 }
+
 
 public class BaseAppRouter: NSObject, IAppRouter, UINavigationControllerDelegate {
     private var assembler: Assembler!
