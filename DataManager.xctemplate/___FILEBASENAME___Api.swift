@@ -5,6 +5,7 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
+
 import Moya
 
 
@@ -21,11 +22,17 @@ extension ___VARIABLE_productName:identifier___Api: TargetType {
     }
     
     public var path: String {
-        return ""
+        switch self {
+        default:
+            return "/"
+        }
     }
     
     public var method: Moya.Method {
-        return .get
+        switch self {
+        default:
+            return .get
+        }
     }
     
     public var sampleData: Data {
@@ -33,11 +40,17 @@ extension ___VARIABLE_productName:identifier___Api: TargetType {
     }
     
     var parameters: [String: Any] {
-        return [:]
+        switch self {
+        default:
+            return [:]
+        }
     }
     
     public var task: Task {
-        return Task.requestPlain
+        switch self {
+        default:
+            return Task.requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        }
     }
     
     public var headers: [String : String]? {
