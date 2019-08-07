@@ -6,7 +6,6 @@
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
 import Foundation
-import UIKit
 
 public class ___VARIABLE_productName:identifier___Module: IModule {
     
