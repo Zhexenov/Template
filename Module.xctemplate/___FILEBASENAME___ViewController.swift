@@ -5,14 +5,15 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
+
 import UIKit
 
 
-public class ___VARIABLE_productName:identifier___ViewController: UIViewController {
+class ___VARIABLE_productName:identifier___ViewController: UIViewController {
     
 	var presenter: I___VARIABLE_productName:identifier___Presenter?
 
-	override public func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
         
     }
@@ -21,15 +22,15 @@ public class ___VARIABLE_productName:identifier___ViewController: UIViewControll
 
 extension ___VARIABLE_productName:identifier___ViewController: I___VARIABLE_productName:identifier___View {
     
-    public func showLoading() {
+    func showLoading() {
         
     }
 	
-    public func hideLoading() {
+    func hideLoading() {
         
     }
     
-    public func showError(message: String) {
+    func showError(message: String) {
         
     }
 }

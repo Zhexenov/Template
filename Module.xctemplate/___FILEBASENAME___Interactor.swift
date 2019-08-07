@@ -5,20 +5,21 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
+
 import Foundation
 
 
-public class ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_productName:identifier___Interactor {
+class ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_productName:identifier___Interactor {
 	
-	public var presenter: I___VARIABLE_productName:identifier___InteractorOutput?
-    	public var dataManager: I___VARIABLE_productName:identifier___DataManager?
+	weak var presenter: I___VARIABLE_productName:identifier___InteractorOutput?
+    var dataManager: I___VARIABLE_productName:identifier___DataManager?
 
 
     init(manager: I___VARIABLE_productName:identifier___DataManager?) {
 		dataManager = manager
 	}
     
-    public func viewDidLoad() {
+    func viewDidLoad() {
         
     }
 }
@@ -26,7 +27,7 @@ public class ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_produ
 
 extension ___VARIABLE_productName:identifier___Interactor: I___VARIABLE_productName:identifier___DataManagerOutput {
     
-    public func onError(message: String?) {
+    func onError(message: String?) {
         
     }
 }
