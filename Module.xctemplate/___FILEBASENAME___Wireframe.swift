@@ -5,7 +5,7 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
-import UIKit
+import Foundation
 
 
 public class ___VARIABLE_productName:identifier___Wireframe: I___VARIABLE_productName:identifier___Wireframe {
