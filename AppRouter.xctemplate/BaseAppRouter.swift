@@ -9,12 +9,12 @@
 import Swinject
 
 
-public protocol IProductRouter: class {
+protocol IProductRouter: class {
     func presentModule(module: Module, parameters: [String: Any], presentType: PresentType)
 }
 
 
-public class BaseAppRouter: NSObject, IAppRouter, UINavigationControllerDelegate {
+class BaseAppRouter: NSObject, IAppRouter, UINavigationControllerDelegate {
     private var assembler: Assembler!
     private var products: [String: (_ appRouter: IAppRouter) -> IProductRouter] = [:]
     let appDelegate = UIApplication.shared.delegate
@@ -25,18 +25,18 @@ public class BaseAppRouter: NSObject, IAppRouter, UINavigationControllerDelegate
         self.products = products
     }
     
-    public var resolver: Resolver {
+    var resolver: Resolver {
         return assembler.resolver
     }
     
-    public func presentModule(module: Module, parameters: [String: Any], presentType: PresentType) {
+    func presentModule(module: Module, parameters: [String: Any], presentType: PresentType) {
         if let productConstuctor = products[module.productName] {
             let product = productConstuctor(self)
             product.presentModule(module: module, parameters: parameters, presentType: presentType)
         }
     }
     
-    public func present(view: UIViewController, animatedDisplay: Bool, animatedDismiss: Bool, presentType: PresentType) {
+    func present(view: UIViewController, animatedDisplay: Bool, animatedDismiss: Bool, presentType: PresentType) {
         switch presentType {
         case .root:
             appDelegate?.window??.rootViewController = UINavigationController(rootViewController: view)
@@ -64,17 +64,17 @@ public class BaseAppRouter: NSObject, IAppRouter, UINavigationControllerDelegate
         }
     }
     
-    public func dismiss() {
+    func dismiss() {
         navigationController?.dismiss(animated: true) {
             self.navigationController = self.appDelegate?.window??.rootViewController as? UINavigationController
         }
     }
     
-    public func popToRootViewController(animated: Bool) {
+    func popToRootViewController(animated: Bool) {
         navigationController?.popToRootViewController(animated: animated)
     }
     
-    public func popViewController(animated: Bool) {
+    func popViewController(animated: Bool) {
         navigationController?.popViewController(animated: animated)
     }
 }

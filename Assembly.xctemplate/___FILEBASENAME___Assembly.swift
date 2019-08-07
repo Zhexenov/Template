@@ -5,14 +5,15 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
+
 import Swinject
 
 
-public class ___VARIABLE_productName:identifier___Assembly: Assembly {
+class ___VARIABLE_productName:identifier___Assembly: Assembly {
     
-    public init() {}
+    init() {}
     
-    public func assemble(container: Container) {
+    func assemble(container: Container) {
         container.register(___VARIABLE_productName:identifier___Module.self) { (_, appRouter: IAppRouter) in
             ___VARIABLE_productName:identifier___Module(router: appRouter)
         }
@@ -22,7 +23,8 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
         }
         
         container.register(I___VARIABLE_productName:identifier___DataManager.self) { r -> I___VARIABLE_productName:identifier___DataManager in
-            return ___VARIABLE_productName:identifier___DataManager()
+            let sessionManager = r.resolve(ISessionManager.self)!
+            return ___VARIABLE_productName:identifier___DataManager(sessionManager: sessionManager)
         }
         
         container.register(I___VARIABLE_productName:identifier___Interactor.self) { r in
@@ -54,15 +56,15 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
          | }
          */
         
-        container.register(___VARIABLE_productName:identifier___ViewController.self) { (r, appRouter: IAppRouter, parameters: [String: Any]) in
+        container.register(I___VARIABLE_productName:identifier___View.self) { (r, appRouter: IAppRouter, parameters: [String: Any]) in
             
             // To load ViewController from .nib
             /*
              let bundle = Bundle(for: ___VARIABLE_productName:identifier___ViewController.self)
              let view = ___VARIABLE_productName:identifier___ViewController(nibName: "___VARIABLE_productName:identifier___ViewController", bundle: bundle)
-            */
+             */
             
-            let view = ___VARIABLE_productName:identifier___ViewController()
+            let view: I___VARIABLE_productName:identifier___View = ___VARIABLE_productName:identifier___ViewController()
             let presenter = r.resolve(I___VARIABLE_productName:identifier___Presenter.self, arguments: appRouter, view as I___VARIABLE_productName:identifier___View)!
             presenter.parameters = parameters
             view.presenter = presenter

@@ -5,20 +5,23 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
+
 import Foundation
 
+
 // Presenter -> View
-@objc public protocol IBaseView: class {
+@objc protocol IBaseView: class {
     
     @objc optional func showLoading()
     
-    @objc optional func showError(message: String)
-    
     @objc optional func hideLoading()
+    
+    @objc optional func showError(message: String)
 }
 
+
 //    View  -> Presenter
-@objc public protocol IBasePresenter: class {
+@objc protocol IBasePresenter: class {
     
     func viewDidLoad()
     
@@ -27,8 +30,9 @@ import Foundation
     @objc optional func viewWillDisappear()
 }
 
+
  //    View  -> Presenter
-@objc public protocol IBaseInteractor: class {
+@objc protocol IBaseInteractor: class {
    
     func viewDidLoad()
     
@@ -37,14 +41,16 @@ import Foundation
     @objc optional func viewWillDisappear()
 }
 
+
 // Interactor -> Presenter
-@objc public protocol IBaseInteractorOutput: class {
+@objc protocol IBaseInteractorOutput: class {
     
     func onError(message: String?)
 }
 
+
 // DataManager -> Interactor
-@objc public protocol IBaseDataManagerOutput: class {
+@objc protocol IBaseDataManagerOutput: class {
     
     func onError(message: String?)
 }

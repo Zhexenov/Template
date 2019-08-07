@@ -5,16 +5,17 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
-import Swinject
+
 import UIKit
+import Swinject
 
 
-public enum PresentType {
+enum PresentType {
     case root, push, present, presentWithNavigationBar, modal, modalWithNavigationBar
 }
 
 
-public protocol IAppRouter {
+protocol IAppRouter {
     
     var resolver: Resolver { get }
     
@@ -25,7 +26,7 @@ public protocol IAppRouter {
 }
 
 
-public class AppRouter: BaseAppRouter {
+class AppRouter: BaseAppRouter {
     public static let shared = AppRouter.createAppRouter()
     public static var assembler = Assembler()
     public static var products: [String: (_ appRouter: IAppRouter) -> IProductRouter] = [:]
