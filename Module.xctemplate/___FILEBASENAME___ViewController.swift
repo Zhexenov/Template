@@ -18,22 +18,18 @@ public class ___VARIABLE_productName:identifier___ViewController: UIViewControll
     }
 }
 
+
 extension ___VARIABLE_productName:identifier___ViewController: I___VARIABLE_productName:identifier___View {
     
     public func showLoading() {
+        
+    }
+	
+    public func hideLoading() {
         
     }
     
     public func showError(message: String) {
         
     }
-    
-    public func hideLoading() {
-        
-    }
-    
-}
-
-extension ___VARIABLE_productName:identifier___ViewController {
-    
 }
