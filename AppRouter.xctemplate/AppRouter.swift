@@ -5,13 +5,14 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
-import Foundation
 import Swinject
 import UIKit
+
 
 public enum PresentType {
     case root, push, present, presentWithNavigationBar, modal, modalWithNavigationBar
 }
+
 
 public protocol IAppRouter {
     
@@ -22,6 +23,7 @@ public protocol IAppRouter {
     func popViewController(animated: Bool)
     func dismiss()
 }
+
 
 public class AppRouter: BaseAppRouter {
     public static let shared = AppRouter.createAppRouter()
