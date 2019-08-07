@@ -5,8 +5,8 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
-import Foundation
 import Swinject
+
 
 public class ___VARIABLE_productName:identifier___Assembly: Assembly {
     
@@ -21,13 +21,14 @@ public class ___VARIABLE_productName:identifier___Assembly: Assembly {
             ___VARIABLE_productName:identifier___Wireframe(router: appRouter)
         }
         
-        container.register(I___VARIABLE_productName:identifier___DataManager.self) { _ in
+        container.register(I___VARIABLE_productName:identifier___DataManager.self) { r -> I___VARIABLE_productName:identifier___DataManager in
             return ___VARIABLE_productName:identifier___DataManager()
         }
         
         container.register(I___VARIABLE_productName:identifier___Interactor.self) { r in
             let dataManager = r.resolve(I___VARIABLE_productName:identifier___DataManager.self)
             let interactor = ___VARIABLE_productName:identifier___Interactor(manager: dataManager)
+            dataManager?.handler = interactor
             return interactor
         }
         
