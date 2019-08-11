@@ -6,7 +6,7 @@
 //  Copyright (c) ___YEAR___ Jex. All rights reserved.
 
 
-import Foundation
+import UIKit
 
 
 class ___VARIABLE_productName:identifier___Wireframe: I___VARIABLE_productName:identifier___Wireframe {
@@ -18,7 +18,9 @@ class ___VARIABLE_productName:identifier___Wireframe: I___VARIABLE_productName:i
     }
 
     func presentView(parameters: [String: Any], presentType: PresentType) {
-        let view = router.resolver.resolve(___VARIABLE_productName:identifier___ViewController.self, arguments: router, parameters)!
+        guard let view = router.resolver.resolve(I___VARIABLE_productName:identifier___View.self, arguments: router, parameters) as? UIViewController else {
+            fatalError("IView to present is not UIViewController")
+        }
         router.present(view: view, animatedDisplay: true, animatedDismiss: true, presentType: presentType)
     }
 }
