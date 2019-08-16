@@ -48,7 +48,7 @@ protocol I___VARIABLE_productName:identifier___View: IBaseView {
 
 
 /* DataManager */
-protocol I___VARIABLE_productName:identifier___DataManager: class {
+protocol I___VARIABLE_productName:identifier___DataManager: IBaseDataManager {
     
     var handler: I___VARIABLE_productName:identifier___DataManagerOutput? { get set }
 

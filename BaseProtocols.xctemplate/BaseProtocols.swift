@@ -49,6 +49,13 @@ import Foundation
 }
 
 
+// Interactor -> DataManager
+@objc protocol IBaseDataManager: class {
+    
+    func cancel()
+}
+
+
 // DataManager -> Interactor
 @objc protocol IBaseDataManagerOutput: class {
     
